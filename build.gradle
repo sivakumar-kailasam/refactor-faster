@@ -20,9 +20,13 @@ sourceSets.test {
     resources.srcDirs = ["src/test"]
 }
 
+
 dependencies {
     compile('com.google.guava:guava:18.0')
+    compile('com.google.errorprone:error_prone_parent:1.1.2')
     compile('com.google.errorprone:error_prone_core:1.1.2')
+    compile('com.google.code.findbugs:jsr305:3.0.0')
+    compile('com.google.auto.value:auto-value:1.1')
     testCompile('junit:junit:4.12')
     testCompile('org.mockito:mockito-all:1.10.19')
 }
