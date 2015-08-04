@@ -5,5 +5,24 @@ repositories {
     jcenter()
 }
 
+tasks.withType(JavaCompile) {
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+}
+
+sourceSets.main {
+    java.srcDirs = ["src/main"]
+    resources.srcDirs = ["src/main"]
+}
+
+sourceSets.test {
+    java.srcDirs = ["src/test"]
+    resources.srcDirs = ["src/test"]
+}
+
 dependencies {
+    compile('com.google.guava:guava:18.0')
+    compile('com.google.errorprone:error_prone_core:1.1.2')
+    testCompile('junit:junit:4.12')
+    testCompile('org.mockito:mockito-all:1.10.19')
 }
