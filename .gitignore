@@ -12,3 +12,7 @@ gradle-app.setting
 ### Java ###
 *.class
 
+### Editor files ###
+*.iml
+*.ipr
+*.iws
